@@ -1,0 +1,109 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 5.33px 80px 0 rgba(0, 0, 0, 0.1);
+    background-color: var(--container-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 40px ;
+    z-index: 2;
+    height: 80px;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu__items {
+    display: flex;
+    gap: 47px;
+}
+
+.navLink {
+    cursor: pointer;
+    font-size: var(--normal-font-size);
+}
+
+.navLink:hover, .navbar__title:hover{
+    color: var(--first-color);
+}
+
+
+.nav__toggle {
+    display: none;
+}
+
+.navbar__title {
+    font-size: var(--h3-font-size);
+}
+
+
+@media screen and (max-width: 1024px){
+    .navbar {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .menu {
+        position: absolute;
+        right: 0;
+        margin-top: 4em;
+        margin-right: 2em;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 11px;
+        z-index: 3;
+    }
+
+    .menu__items {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 13px;
+        border-radius: 10px;
+        background-color: var(--container-color);
+        padding: 24px 33px;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    }
+
+
+    .menu__open {
+        display: flex;
+        z-index: 1;
+    }
+
+    .nav__toggle {
+        display: block;
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        background-color: var(--container-color);
+        padding: 12px 10px;
+        cursor: pointer;
+    }
+    
+    .nav__toggle span {
+        display: block;
+        width: 20px;
+        height: 2px;
+        border-radius: 2px;
+        background-color: var(--title-color);
+        margin-bottom: 5px;
+    }
+    
+    .animate-toggle span:first-child {
+        transform: rotate(45deg) translate(6px, 4px);
+    }
+    
+    .animate-toggle span:nth-child(2) {
+        display: none;
+    }
+    
+    .animate-toggle span:last-child {
+        transform: rotate(-45deg) translate(1px, 1px);
+    }
+    
+}

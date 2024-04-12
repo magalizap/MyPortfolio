@@ -1,0 +1,189 @@
+/*================= GOOGLE FONTS =================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Poppins:wght@500;600;700;800&display=swap');
+
+/*================= MOBILE CSS =================*/
+
+/*================= CSS VARIABLES =================*/
+
+:root {
+  /*============== COLORS ==============*/
+  --first-color: hsl(271, 76%, 53%);
+  --title-color: hsl(0, 0%, 40%);
+  --text-color: hsl(0, 0%, 50%);
+  --body-color: hsl(0, 0%, 100%);
+  --container-color: hsl(0, 0%, 93%);
+  --border-color: hsl(0, 0%, 87%);
+  --text-white: #fff;
+
+  /*============== FONT AND TYPOGRAFY ==============*/
+  --body-font: 'Poppins', sans-serif;
+  --second-font: 'Open Sans', sans-serif;
+  
+  --big-font-size: 36px;
+  --h1-font-size: 32px;
+  --h2-font-size: 24px;
+  --h3-font-size: 20px;
+  --large-font-size: 16px;
+  --normal-font-size: 15px;
+  --small-font-size: 14px;
+  --smaller-font-size: 13px;
+  --tiny-font-size: 11px;
+
+  /*============== FONT WEIGHT ==============*/
+  --weight-400: 400;
+  --weight-500: 500;
+  --weight-600: 600;
+  --weight-700: 700;
+  --weight-800: 800;
+
+
+}
+
+.dark-theme {
+  --title-color: hsl(0, 0%, 100%);
+  --text-color: hsl(0, 0%, 80%);
+  --body-color: hsl(0, 0%, 7%);
+  --container-color: hsl(0, 1%, 17%);
+  --border-color: hsl(0, 0%, 15%);
+}
+
+/*================= BASE =================*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+input,
+textarea {
+  font-family: var(--body-font) ;
+  font-size: var(--normal-font-size);
+  font-weight: var(--weight-500);
+}
+
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+.app {
+  height: 100vh;
+}
+
+/*
+.sections {
+  width: 100%;
+  height: calc(100vh - 80px);
+  position: relative;
+  top: 80px;
+  scroll-snap-type: y mandatory;
+}
+
+.sections section {
+  height: calc(100vh - 80px);
+  scroll-snap-align: start;
+}*/
+
+.sections {
+  width: 100%;
+  position: relative;
+  top: 80px;
+  /*scroll-snap-type: y mandatory;*/
+}
+
+.sections section {
+  min-height: calc(100vh - 80px);
+  /*scroll-snap-align: start;*/
+}
+
+
+h1, h2, h3, h4 {
+  color: var(--title-color);
+  font-family: var(--body-font);
+  font-weight: var(--weight-700);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,  input, textarea {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+
+img {
+  max-width: 100%;
+}
+
+/*================= REUSABLE CSS =================*/
+
+
+
+.container {
+  max-width: 1140px;
+  margin-inline: auto;
+}
+
+.grid {
+  display: grid;
+  gap: 30px;
+}
+
+.section{
+  padding-block: 70px;
+}
+
+.section__title {
+  font-size: var(--big-font-size);
+  font-weight: var(--weight-800);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.separator {
+  border-top: 1px solid var(--border-color);
+  max-width: 40%;
+  margin: 72px auto 56px;
+}
+
+/*================= LAPTOP CSS =================*/
+
+@media screen and (min-width: 700px){
+  .sections {
+    height: calc(100vh - 80px);
+
+  }
+
+  .sections section {
+    height: calc(100vh - 80px);
+    min-height: 100%;
+
+  }
+}
+
+
+@media screen and (min-width: 1140px){
+  :root {
+    --big-font-size: 56px;
+    --h1-font-size: 50px;
+    --h2-font-size: 32px;
+    --h3-font-size: 24px;
+    --large-font-size: 18px;
+    --normal-font-size: 16px;
+    --small-font-size: 15px;
+    --smaller-font-size: 14px;
+    --tiny-font-size: 12px;
+  }
+
+  
+}
